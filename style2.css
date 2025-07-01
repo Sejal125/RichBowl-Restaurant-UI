@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#logo1{
+    background-image: url(food_logo.jpg);
+    margin-left: 8%;
+    margin-top: 1%;
+    height: 70px;
+    width:90px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+}
+#first{
+    background-color: rgb(123, 178, 227);
+     display: flex;
+    justify-content: center;
+     width: 100%;
+     height: 450px;
+     margin-top: 2%;
+    
+}
+#food1{
+  background-image: url(first.avif);
+  height: 400px;
+  width: 400px;
+  /* height: 50vw;
+  width: 50vw; */
+  border-radius: 50%;
+  /* background-position: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover ;
+  margin-top: 2%
+ 
+  
+}
+#content{
+    margin-top:5% ;
+    margin-left: 6%;
+}
+#oo{
+    color: white;
+    background-color: rgb(21, 164, 55);
+    height: 8%;
+    width: 70%;
+    text-align: center;
+    border-radius: 16px;
+    padding-top: 2%;
+    transition: transform 0.5s ease-in-out
+}
+#oo:hover{
+    transform: scale(1.2);
+}
+#para{
+    margin-top: 6%;
+    font-size: 70px;
+    text-transform: capitalize;
+}
+/* #para2{
+    padding-top: 6%;
+} */
+#rt{
+    height: 5%;
+    width: 40%;
+    margin-top: 6%;
+    background-color: rgb(244, 183, 69);
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    border-radius: 16px;
+    transition: transform 0.5s ease-in-out
+}
+#rt:hover{
+    transform: scale(1.2);
+}
+#reserve-form {
+    display: none; /* Form hidden by default */
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#toggle-form:checked + #reserve-form {
+    display: block; /* Show the form when the checkbox is checked */
+}
+
+#reserve-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#reserve-form input,
+#reserve-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reserve-form button {
+    background-color: rgb(244, 183, 69);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#reserve-form button:hover {
+    transform: scale(1.1);
+}
+
+#second{
+     max-height: 30%;
+     max-width: 70%;
+     margin-top: 1%;
+     margin-left: 15%;
+     margin-right: 15%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#second >div{
+    display: flex;
+    flex: 1;
+    margin: 0 2%;
+    text-align: center;
+    justify-content: flex-start;
+}
+.images{
+   max-height: 30%;
+   max-width: 30%;
+}
+.images img{
+    max-width: 90% ;
+    max-height: 90%;
+}
+.texts{
+    text-align: center;
+    margin-top: 0px;
+}
+#third{
+    margin-top: 3%;
+    text-align: center;
+}
+#third h2{
+   background-color: rgb(123, 178, 227);
+}
+ 
+.food_images{
+    width: 70%;
+    height: 80%;
+    margin: 2% 15% 2% 15%;
+    display: grid;
+    gap: 2%;
+    grid-template-columns:repeat(4,23.5%);
+    grid-template-areas: "I1 I1 I2 I3" "I1 I1 I2 I4" "I5 I6 I7 I8";
+}
+.box{
+    position: relative;
+    overflow: hidden;
+    /* height: 200px; */
+    transition: transform 0.3s ease-in-out
+}
+.box:hover{
+    transform: scale(1.05);
+   }
+.box img{
+    height: 100%;
+   width: 100%;
+   display: block;
+   object-fit: cover;
+   transition: opacity 0.5s ease-in-out;
+}
+.box:hover img{
+    opacity: 0.3 ;
+}
+.box::after{
+    content: attr(data-info);
+    position: absolute;
+    top: 50%;
+    left: 50% ;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-size: 0.9em;
+    /* line-height: 1.2; 
+    word-wrap: break-word; */
+    text-align: center;
+    /* background-color: rgba(0,0,0,0.7); */
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+.box:hover::after{
+    opacity: 1;
+}
+#box-1{
+    grid-area: I1;
+}
+#box-2{
+    grid-area: I2;
+}
+#box-3{
+    grid-area: I3;
+}
+#box-4{
+    grid-area: I4;
+}
+#box-5{
+    grid-area: I5;
+}
+#box-6{
+    grid-area: I6;
+}
+#box-7{
+    grid-area: I7;
+}
+#box-8{
+    grid-area: I8;
+}
+
+#fourth{
+    background-color: beige;
+    color: rgb(245, 244, 242);
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+#fourth >div{
+    background-color: brown;
+    /* height: 26%; */
+    width: 74%;
+    padding: 2% 0 2% 0 ;
+    margin-left:14% ;
+    margin-right: 14%;
+}
+
+#timing{
+    margin-bottom: 2%;
+
+}
+#sm{
+    background-color: brown;
+    margin-top: 2%;   
+    margin-bottom: 2%;
+}
